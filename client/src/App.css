@@ -1,13 +1,15 @@
 img {
-  width: 100%;
+  width: 20%;
 }
+
+
 
 .landing {
   position: relative;
   background: url('./img/showcase.jpg') no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 70vh;
   margin-top: -24px;
   margin-bottom: -50px;
 }
@@ -37,3 +39,5 @@ img {
 .form-control::placeholder {
   color: #bbb !important;
 }
+
+

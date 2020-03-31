@@ -26,7 +26,7 @@ import Posts from './components/posts/Posts';
 import Post from './components/post/Post';
 import NotFound from './components/not-found/NotFound';
 
-import './App.css';
+import './App.css'
 
 
 // Check for token
