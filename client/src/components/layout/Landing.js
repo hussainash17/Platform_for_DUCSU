@@ -20,7 +20,7 @@ class Landing extends Component {
                 <h1 className="display-3 mb-4">ডাকসু</h1>
                 <p className="lead">
                   {' '}
-                  A platform for complaine anything to DUCSU
+                  A platform for complaining anything to DUCSU
                 </p>
                 <hr />
                 <Link to="/register" className="btn btn-lg btn-info mr-2">
