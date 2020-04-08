@@ -85,7 +85,7 @@ router.get('/user/:user_id', (req, res) => {
 // @access         Private
 
 router.post(
-    '/', passport.authenticate({
+    '/', passport.authenticate('jwt',{
         session: false
     }),
     (req, res) => {
@@ -309,8 +309,5 @@ router.delete(
       })
     }
 )
-  
-
-
 
 module.exports = router
