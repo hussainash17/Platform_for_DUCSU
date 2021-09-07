@@ -28,6 +28,7 @@ class Posts extends Component {
             <div className="col-md-12">
               <PostForm />
               {postContent}
+              <h1>Hello</h1>
             </div>
           </div>
         </div>
