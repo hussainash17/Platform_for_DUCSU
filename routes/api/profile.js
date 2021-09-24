@@ -61,7 +61,7 @@ router.get('/all', (req, res) => {
 // @description    Get  profile by user ID
 // @access         Public
 
-router.get('/user/:user_id', (req, res) => {
+router.get('/:user_id', (req, res) => {
   const errors = {};
 
   Profile.findOne({ user: req.params.user_id })

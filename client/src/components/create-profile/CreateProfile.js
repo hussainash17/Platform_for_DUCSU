@@ -124,13 +124,13 @@ class CreateProfile extends Component {
     // Select options for status
     const options = [
       { label: '* Select Professional Status', value: 0 },
-      { label: 'Developer', value: 'Developer' },
-      { label: 'Junior Developer', value: 'Junior Developer' },
-      { label: 'Senior Developer', value: 'Senior Developer' },
-      { label: 'Manager', value: 'Manager' },
-      { label: 'Student or Learning', value: 'Student or Learning' },
+      { label: 'First Year Student', value: 'First Year Student' },
+      { label: 'Second Year Student', value: 'Second Year Student' },
+      { label: 'Third Year Student', value: 'Third Year Student' },
+      { label: 'Fourth Year Student', value: 'Fourth Year Student' },
+      { label: 'Previous Student', value: 'Previous Student' },
       { label: 'Instructor or Teacher', value: 'Instructor or Teacher' },
-      { label: 'Intern', value: 'Intern' },
+      { label: 'Master\'s student', value: 'Master\'s student' },
       { label: 'Other', value: 'Other' }
     ];
 
@@ -151,7 +151,7 @@ class CreateProfile extends Component {
                   value={this.state.handle}
                   onChange={this.onChange}
                   error={errors.handle}
-                  info="A unique handle for your profile URL. Your full name, company name, nickname"
+                  info="A unique handle for your profile URL. Your full name or nickname or anything"
                 />
                 <SelectListGroup
                   placeholder="Status"
@@ -160,7 +160,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   options={options}
                   error={errors.status}
-                  info="Give us an idea of where you are at in your career"
+                  info="If you are a previous student, give your company name where you are working"
                 />
                 <TextFieldGroup
                   placeholder="Company"
@@ -168,7 +168,7 @@ class CreateProfile extends Component {
                   value={this.state.company}
                   onChange={this.onChange}
                   error={errors.company}
-                  info="Could be your own company or one you work for"
+                  info="Website Could be your own company or one you work for"
                 />
                 <TextFieldGroup
                   placeholder="Website"
@@ -184,7 +184,7 @@ class CreateProfile extends Component {
                   value={this.state.location}
                   onChange={this.onChange}
                   error={errors.location}
-                  info="City or city & state suggested (eg. Boston, MA)"
+                  info="City or city & state suggested (eg. Dhaka, Chittagong)"
                 />
                 <TextFieldGroup
                   placeholder="* Skills"
@@ -193,15 +193,15 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.skills}
                   info="Please use comma separated values (eg.
-                    HTML,CSS,JavaScript,PHP"
+                    Painting, Cooking, Singing, etc )"
                 />
                 <TextFieldGroup
-                  placeholder="Github Username"
+                  placeholder="Facebook Username"
                   name="githubusername"
                   value={this.state.githubusername}
                   onChange={this.onChange}
                   error={errors.githubusername}
-                  info="If you want your latest repos and a Github link, include your username"
+                  info="If you want to connect with facebook, include your username"
                 />
                 <TextAreaFieldGroup
                   placeholder="Short Bio"
