@@ -31,13 +31,13 @@ class Profile extends Component {
     } else {
       profileContent = (
         <div>
-          <div className="row">
-            <div className="col-md-6">
-              <Link to="/profiles" className="btn btn-light mb-3 float-left">
+          <div className='row'>
+            <div className='col-md-6'>
+              <Link to='/profiles' className='btn btn-light mb-3 float-left'>
                 Back To Profiles
               </Link>
             </div>
-            <div className="col-md-6" />
+            <div className='col-md-6' />
           </div>
           <ProfileHeader profile={profile} />
           <ProfileAbout profile={profile} />
@@ -53,10 +53,10 @@ class Profile extends Component {
     }
 
     return (
-      <div className="profile">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">{profileContent}</div>
+      <div className='profile'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-md-12'>{profileContent}</div>
           </div>
         </div>
       </div>
@@ -66,11 +66,11 @@ class Profile extends Component {
 
 Profile.propTypes = {
   getProfileByHandle: PropTypes.func.isRequired,
-  profile: PropTypes.object.isRequired
+  profile: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = state => ({
-  profile: state.profile
+const mapStateToProps = (state) => ({
+  profile: state.profile,
 });
 
 export default connect(mapStateToProps, { getProfileByHandle })(Profile);
