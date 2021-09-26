@@ -62,10 +62,7 @@ class Navbar extends Component {
     );
 
     return (
-      <nav
-        className='navbar navbar-expand-lg navbar-light bg-light'
-        style={{ backgroundColor: '#e3f2fd;' }}
-      >
+      <nav className='navbar navbar-expand-lg navbar-light bg-light mb-5'>
         <div className='container'>
           <Link className='navbar-brand' to='/feedWithPost'>
             DUCSU

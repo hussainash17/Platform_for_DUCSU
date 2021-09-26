@@ -61,10 +61,10 @@ router.get('/all', (req, res) => {
 // @description    Get  profile by user ID
 // @access         Public
 
-router.get('/:user_id', (req, res) => {
+router.get('/user/:user_id', ({ params: { user_id } }, res) => {
   const errors = {};
 
-  Profile.findOne({ user: req.params.user_id })
+  Profile.findOne({ user: user_id })
     .populate('user', ['name', 'avatar'])
     .then((profile) => {
       if (!profile) {
@@ -78,6 +78,27 @@ router.get('/:user_id', (req, res) => {
       res.status(404).json({ profile: 'There is no profile for this user' })
     );
 });
+
+// // @route          GET api/profile/user/:handle
+// // @description    Get  profile by user ID
+// // @access         Public
+
+// router.get('/user/:handle', ({ params: { handle } }, res) => {
+//   const errors = {};
+
+//   Profile.findOne({ profile: handle })
+//     .then((profile) => {
+//       if (!profile) {
+//         errors.noprofile = 'There is no profile for this user';
+//         res.status(404).json(errors);
+//       }
+
+//       res.json(profile);
+//     })
+//     .catch((err) =>
+//       res.status(404).json({ profile: 'There is no profile for this user' })
+//     );
+// });
 
 // @route          POST api/profile
 // @description    Create or edit user profile
@@ -307,5 +328,14 @@ router.delete(
     });
   }
 );
+
+router.get('/ashraf/:id', (req, res) => {
+  Profile.findOne({ handle: req.params })
+    .then((profile) => {
+      console.log(typeof profile);
+      res.send(profile);
+    })
+    .catch((err) => res.send(err));
+});
 
 module.exports = router;
